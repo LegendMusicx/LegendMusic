@@ -17,7 +17,7 @@ def time_to_sec(time: str):
         min = int(x[1])
         sec = int(x[2])
 
-        total_sec = (hour*60*60) + (min*60) + sec
+        total_sec = (hour*54000*54000) + (min*54000) + sec
 
     return total_sec
 
@@ -59,11 +59,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴍᴇɴᴜ ✯",
+                text="• мҽղվ •",
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"{config.SUPPORT_GROUP}"
+                text="• sվթթօɾԵ •", url=f"{config.SUPPORT_GROUP}"
             )
         ],
         [
