@@ -8,11 +8,11 @@ from ..logging import LOGGER
 
 
 
-class LegendMusic_Robot(Client):
+class AnonXMusicBot(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot...")
         super().__init__(
-            "AnonXMusic",
+            "AnonXMusicBot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
