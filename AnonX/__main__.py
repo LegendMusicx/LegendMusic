@@ -7,10 +7,10 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from LegendX import LOGGER, app, userbot
-from LegendX.core.call import Anon
-from LegendX.plugins import ALL_MODULES
-from LegendX.utils.database import get_banned_users, get_gbanned
+from AnonX import LOGGER, app, userbot
+from AnonX.core.call import Anon
+from AnonX.plugins import ALL_MODULES
+from AnonX.utils.database import get_banned_users, get_gbanned
 
 loop = asyncio.get_event_loop()
 
@@ -23,7 +23,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("LegendX").error(
+        LOGGER("AnonX").error(
             "WTF Baby ! Atleast add a pyrogram string, How Cheap..."
         )
         return
@@ -52,18 +52,18 @@ async def init():
     await userbot.start()
     await LegendX.start()
     try:
-        await LegendX.stream_call(
+        await AnonX.stream_call(
             "https://telegra.ph/file/8d5db123638c2f6bb6ce4.mp4"
         )
     except NoActiveGroupCall:
-        LOGGER("LegendX").error(
+        LOGGER("AnonX").error(
             "[ERROR] - \n\nHey Baby, firstly open telegram and turn on voice chat in Logger Group else fu*k off. If you ever ended voice chat in log group i will stop working and users will fu*k you up."
         )
         sys.exit()
     except:
         pass
     await Anon.decorators()
-    LOGGER("LegendX").info("Music Bot Started Successfully, Now Gib your girlfriend chumt to @anonymous_was_bot")
+    LOGGER("AnonX").info("Music Bot Started Successfully, Now Gib your girlfriend chumt to @anonymous_was_bot")
     await idle()
 
 
