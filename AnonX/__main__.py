@@ -31,7 +31,7 @@ async def init():
         not config.SPOTIFY_CLIENT_ID
         and not config.SPOTIFY_CLIENT_SECRET
     ):
-        LOGGER("LegendX").warning(
+        LOGGER("AnonX").warning(
             "Spotify Client Id & Secret not added, Chutiya Saala ek itni simple cheej nahi laa paaya."
         )
     try:
@@ -46,7 +46,7 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("AnonX.plugins" + all_module)
-    LOGGER("LegendX.plugins").info(
+    LOGGER("AnonX.plugins").info(
         "Necessary Modules Imported Successfully."
     )
     await userbot.start()
